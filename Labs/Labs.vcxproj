@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{277EAE68-9EED-4EFF-BAD3-2A70787A3E8D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Labs</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)/../Bin/</OutDir>
+    <IntDir>$(SolutionDir)/../Build/$(Configuration)/</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)/../Bin/</OutDir>
+    <IntDir>$(SolutionDir)/../Build/$(Configuration)/</IntDir>
+    <TargetName>$(ProjectName)-$(Configuration)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../ThirdParty/glew-2.1.0/include;../ThirdParty/FreeImage-3170/Source;../ThirdParty/glfw-3.3/include;../ThirdParty/glm;../ThirdParty/Irrklang/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../ThirdParty/FreeImage-3170/lib/win32;../ThirdParty/Irrklang/lib/Win32-visualStudio;../ThirdParty/glew-2.1.0/lib/win32;../ThirdParty/glfw-3.3/lib/win32/lib-vc2017</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FreeImage.lib;opengl32.lib;glew32s.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../ThirdParty/FreeImage-3170/Source;../ThirdParty/glew-2.1.0/include;../ThirdParty/glfw-3.3/include;../ThirdParty/glm</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../ThirdParty/FreeImage-3170/lib/win32;../ThirdParty/glew-2.1.0/lib/Win32;../ThirdParty/glfw-3.3/lib/win32/lib-vc2017</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FreeImage.lib;opengl32.lib;glew32s.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:LIBCMT %(AdditionalOptions)</AdditionalOptions>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\Assets\Scenes\AnimatedScene.scene" />
+    <None Include="..\Assets\Scenes\AnimatedSceneWithParticles.scene" />
+    <None Include="..\Assets\Scenes\BSplineScene.scene" />
+    <None Include="..\Assets\Scenes\CarScene.scene" />
+    <None Include="..\Assets\Scenes\CoordinateSystem.scene" />
+    <None Include="..\Assets\Scenes\StaticScene.scene" />
+    <None Include="..\Assets\Shaders\BlueColor.fragmentshader" />
+    <None Include="..\Assets\Shaders\depthshader.fragmentshader" />
+    <None Include="..\Assets\Shaders\depthshader.geometryshader" />
+    <None Include="..\Assets\Shaders\depthshader.vertexshader" />
+    <None Include="..\Assets\Shaders\FragmentShader.fragmentshader" />
+    <None Include="..\Assets\Shaders\Light.fragmentshader" />
+    <None Include="..\Assets\Shaders\Light.vertexshader" />
+    <None Include="..\Assets\Shaders\PathLines.fragmentshader" />
+    <None Include="..\Assets\Shaders\PathLines.vertexshader" />
+    <None Include="..\Assets\Shaders\SolidColor.fragmentshader" />
+    <None Include="..\Assets\Shaders\SolidColor.vertexshader" />
+    <None Include="..\Assets\Shaders\Textured.fragmentshader" />
+    <None Include="..\Assets\Shaders\Textured.vertexshader" />
+    <None Include="..\Assets\Shaders\TexturedLight.fragmentshader" />
+    <None Include="..\Assets\Shaders\TexturedLight.vertexshader" />
+    <None Include="..\Assets\Shaders\VertexShader.vertexshader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\Textures\BillboardTest.bmp" />
+    <Image Include="..\Assets\Textures\Particle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Assignment2.cpp" />
+    <ClCompile Include="src\A2main.cpp" />
+    <ClCompile Include="src\Animation.cpp" />
+    <ClCompile Include="src\Block.cpp" />
+    <ClCompile Include="src\BSpline.cpp" />
+    <ClCompile Include="src\BSplineCamera.cpp" />
+    <ClCompile Include="src\Bus.cpp" />
+    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Car.cpp" />
+    <ClCompile Include="src\CubeModel.cpp" />
+    <ClCompile Include="src\CylinderModel.cpp" />
+    <ClCompile Include="src\EventManager.cpp" />
+    <ClCompile Include="src\FirstPersonCamera.cpp" />
+    <ClCompile Include="src\lab01.cpp" />
+    <ClCompile Include="src\lab03.cpp" />
+    <ClCompile Include="src\lab04.cpp" />
+    <ClCompile Include="src\Light.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Model.cpp" />
+    <ClCompile Include="src\Models.cpp" />
+    <ClCompile Include="src\Quad.cpp" />
+    <ClCompile Include="src\Renderer.cpp" />
+    <ClCompile Include="src\Shadows.cpp" />
+    <ClCompile Include="src\SphereModel.cpp" />
+    <ClCompile Include="src\StaticCamera.cpp" />
+    <ClCompile Include="src\TexturedCube.cpp" />
+    <ClCompile Include="src\Textureloader.cpp" />
+    <ClCompile Include="src\ThirdPersonCamera.cpp" />
+    <ClCompile Include="src\WheelModel.cpp" />
+    <ClCompile Include="src\World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\A2main.h" />
+    <ClInclude Include="src\Animation.h" />
+    <ClInclude Include="src\Block.h" />
+    <ClInclude Include="src\BSpline.h" />
+    <ClInclude Include="src\BSplineCamera.h" />
+    <ClInclude Include="src\Bus.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Car.h" />
+    <ClInclude Include="src\CubeModel.h" />
+    <ClInclude Include="src\CylinderModel.h" />
+    <ClInclude Include="src\EventManager.h" />
+    <ClInclude Include="src\FirstPersonCamera.h" />
+    <ClInclude Include="src\Light.h" />
+    <ClInclude Include="src\Model.h" />
+    <ClInclude Include="src\Models.h" />
+    <ClInclude Include="src\OBJloader.h" />
+    <ClInclude Include="src\ParsingHelper.h" />
+    <ClInclude Include="src\Quad.h" />
+    <ClInclude Include="src\Renderer.h" />
+    <ClInclude Include="src\Shadows.h" />
+    <ClInclude Include="src\SphereModel.h" />
+    <ClInclude Include="src\StaticCamera.h" />
+    <ClInclude Include="src\TexturedCube.h" />
+    <ClInclude Include="src\Textureloader.h" />
+    <ClInclude Include="src\ThirdPersonCamera.h" />
+    <ClInclude Include="src\WheelModel.h" />
+    <ClInclude Include="src\World.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{d8c6f640-d50d-4388-8a50-90686886c71a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Scenes">
+      <UniqueIdentifier>{66439e2a-f58c-4c2a-aad1-3af2e58e4920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Textures">
+      <UniqueIdentifier>{88876fa3-1e9f-4223-8d1d-570a59edf1cd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Assets\Shaders\BlueColor.fragmentshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\PathLines.fragmentshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\PathLines.vertexshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\SolidColor.fragmentshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\SolidColor.vertexshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Scenes\CoordinateSystem.scene">
+      <Filter>Resource Files\Scenes</Filter>
+    </None>
+    <None Include="..\Assets\Scenes\StaticScene.scene">
+      <Filter>Resource Files\Scenes</Filter>
+    </None>
+    <None Include="..\Assets\Scenes\AnimatedScene.scene">
+      <Filter>Resource Files\Scenes</Filter>
+    </None>
+    <None Include="..\Assets\Scenes\AnimatedSceneWithParticles.scene">
+      <Filter>Resource Files\Scenes</Filter>
+    </None>
+    <None Include="..\Assets\Scenes\BSplineScene.scene">
+      <Filter>Resource Files\Scenes</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\Textured.vertexshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\Textured.fragmentshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Scenes\CarScene.scene">
+      <Filter>Resource Files\Scenes</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\VertexShader.vertexshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\FragmentShader.fragmentshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\Light.vertexshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\Light.fragmentshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\TexturedLight.fragmentshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\TexturedLight.vertexshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\depthshader.vertexshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\depthshader.fragmentshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\depthshader.geometryshader">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\Textures\BillboardTest.bmp">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="..\Assets\Textures\Particle.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BSpline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BSplineCamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CubeModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EventManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FirstPersonCamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lab01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lab03.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lab04.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SphereModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StaticCamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CylinderModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Assignment2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Car.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TexturedCube.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\A2main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WheelModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Quad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ThirdPersonCamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Models.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Textureloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Block.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shadows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Animation.h" />
+    <ClInclude Include="src\BSpline.h" />
+    <ClInclude Include="src\BSplineCamera.h" />
+    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\EventManager.h" />
+    <ClInclude Include="src\FirstPersonCamera.h" />
+    <ClInclude Include="src\Model.h" />
+    <ClInclude Include="src\ParsingHelper.h" />
+    <ClInclude Include="src\Renderer.h" />
+    <ClInclude Include="src\SphereModel.h" />
+    <ClInclude Include="src\StaticCamera.h" />
+    <ClInclude Include="src\World.h" />
+    <ClInclude Include="src\CylinderModel.h" />
+    <ClInclude Include="src\Car.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CubeModel.h" />
+    <ClInclude Include="src\TexturedCube.h" />
+    <ClInclude Include="src\Light.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bus.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WheelModel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\A2main.h" />
+    <ClInclude Include="src\Quad.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ThirdPersonCamera.h" />
+    <ClInclude Include="src\Models.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OBJloader.h" />
+    <ClInclude Include="src\Textureloader.h" />
+    <ClInclude Include="src\Block.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadows.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

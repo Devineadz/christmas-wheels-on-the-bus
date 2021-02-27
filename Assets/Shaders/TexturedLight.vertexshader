@@ -1,0 +1,35 @@
+#version 330 core
+
+layout (location = 0) in vec3 aPos;
+layout (location = 1) in vec3 aColor;
+layout (location = 2) in vec2 aUV;
+layout (location = 3) in vec3 aNormal;
+		
+uniform mat4 worldMatrix;
+uniform mat4 viewMatrix;  // default value for view matrix (identity)
+uniform mat4 projectionMatrix;
+uniform mat4 lightSpaceMatrix;
+uniform bool reverse_normals;
+
+out vec3 Normal;
+out vec3 FragPos;
+out vec2 vertexUV;
+out vec3 vertexColor;
+out vec4 FragPosLightSpace;
+
+void main()
+{
+		 vertexColor = aColor;
+		 mat4 modelViewProjection = projectionMatrix * viewMatrix * worldMatrix;
+		
+		 FragPos = vec3(worldMatrix * vec4(aPos, 1.0));
+		 FragPosLightSpace = lightSpaceMatrix * vec4(FragPos, 1.0);
+
+		if(reverse_normals) // a slight hack to make sure the outer large cube displays lighting from the 'inside' instead of the default 'outside'.
+			 Normal = transpose(inverse(mat3(worldMatrix))) * (-1.0 * aNormal);
+		else
+			Normal = transpose(inverse(mat3(worldMatrix))) * aNormal;
+		vertexUV = aUV;
+
+		gl_Position = modelViewProjection * vec4(aPos.x, aPos.y, aPos.z, 1.0);
+}
